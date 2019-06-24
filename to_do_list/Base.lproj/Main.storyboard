@@ -6,9 +6,69 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Add To Do View Controller-->
+        <scene sceneID="0O4-2d-gnW">
+            <objects>
+                <viewController id="8Sb-Pl-JOX" customClass="AddToDoViewController" customModule="to_do_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5hj-MB-faH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKZ-SM-XT1">
+                                <rect key="frame" x="166" y="101" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMM-T6-WDf">
+                                <rect key="frame" x="148" y="221" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bUt-6p-V92">
+                                <rect key="frame" x="163" y="330" width="49" height="31"/>
+                            </switch>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfL-wJ-9kd">
+                                <rect key="frame" x="137" y="160" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omy-Un-9YR">
+                                <rect key="frame" x="170" y="431" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nfL-wJ-9kd" firstAttribute="top" secondItem="TKZ-SM-XT1" secondAttribute="bottom" constant="38" id="25v-u8-k3A"/>
+                            <constraint firstItem="TKZ-SM-XT1" firstAttribute="top" secondItem="pdQ-jI-18X" secondAttribute="top" constant="37" id="2jA-n6-Lhv"/>
+                            <constraint firstItem="iMM-T6-WDf" firstAttribute="top" secondItem="nfL-wJ-9kd" secondAttribute="bottom" constant="31" id="5J9-qy-G4F"/>
+                            <constraint firstItem="nfL-wJ-9kd" firstAttribute="leading" secondItem="pdQ-jI-18X" secondAttribute="leading" constant="137" id="6qn-05-Ono"/>
+                            <constraint firstItem="pdQ-jI-18X" firstAttribute="trailing" secondItem="iMM-T6-WDf" secondAttribute="trailing" constant="152" id="Hbb-WL-rIE"/>
+                            <constraint firstItem="pdQ-jI-18X" firstAttribute="trailing" secondItem="Omy-Un-9YR" secondAttribute="trailing" constant="175" id="IZP-8W-WCZ"/>
+                            <constraint firstItem="pdQ-jI-18X" firstAttribute="trailing" secondItem="bUt-6p-V92" secondAttribute="trailing" constant="165" id="SbW-rA-4LN"/>
+                            <constraint firstItem="bUt-6p-V92" firstAttribute="top" secondItem="iMM-T6-WDf" secondAttribute="bottom" constant="88" id="TBK-ey-QnG"/>
+                            <constraint firstItem="iMM-T6-WDf" firstAttribute="leading" secondItem="pdQ-jI-18X" secondAttribute="leading" constant="148" id="VJW-hZ-OjH"/>
+                            <constraint firstItem="Omy-Un-9YR" firstAttribute="leading" secondItem="pdQ-jI-18X" secondAttribute="leading" constant="170" id="VN6-Ab-Anx"/>
+                            <constraint firstItem="pdQ-jI-18X" firstAttribute="trailing" secondItem="TKZ-SM-XT1" secondAttribute="trailing" constant="171" id="ZsB-qk-Wra"/>
+                            <constraint firstItem="bUt-6p-V92" firstAttribute="leading" secondItem="pdQ-jI-18X" secondAttribute="leading" constant="163" id="daF-Nt-gNy"/>
+                            <constraint firstItem="pdQ-jI-18X" firstAttribute="trailing" secondItem="nfL-wJ-9kd" secondAttribute="trailing" constant="141" id="fTt-fR-1TK"/>
+                            <constraint firstItem="TKZ-SM-XT1" firstAttribute="leading" secondItem="pdQ-jI-18X" secondAttribute="leading" constant="166" id="lF6-rT-8nS"/>
+                            <constraint firstItem="Omy-Un-9YR" firstAttribute="top" secondItem="bUt-6p-V92" secondAttribute="bottom" constant="70" id="oaI-cn-NNS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pdQ-jI-18X"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6e-cG-nLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="-36"/>
+        </scene>
         <!--ToDo List-->
         <scene sceneID="0AU-Lr-GvG">
             <objects>
@@ -33,7 +93,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ToDo List" id="24X-zB-V2x" customClass="ToD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="was-D3-q3c"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="was-D3-q3c">
+                            <connections>
+                                <segue destination="8Sb-Pl-JOX" kind="show" id="SfD-eK-cLT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdv-xC-IPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
